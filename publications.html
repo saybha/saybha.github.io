@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Publications and preprints by Sayak Bhattacharjee.">
+  <title>Publications — Sayak Bhattacharjee</title>
+
+  <style>
+    :root {
+      --background: #ffffff;
+      --text: #242424;
+      --muted: #6b6b67;
+      --line: #deded7;
+      --accent: #343fc4;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--background);
+      color: var(--text);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 18px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection {
+      background: #dfe0fa;
+    }
+
+    a {
+      color: inherit;
+      text-decoration-color: #b5b5ad;
+      text-underline-offset: 4px;
+    }
+
+    a:hover {
+      color: var(--accent);
+      text-decoration-color: var(--accent);
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 5px;
+    }
+
+    .page {
+      width: min(100% - 48px, 820px);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 54px 0 30px;
+      border-bottom: 1px solid var(--line);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(28px, 5vw, 40px);
+      font-weight: normal;
+      letter-spacing: -1.3px;
+      line-height: 1.2;
+    }
+
+    h1 a {
+      text-decoration: none;
+    }
+
+    .mono,
+    nav,
+    .section-label,
+    .year,
+    footer {
+      font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+      font-size: 11px;
+      line-height: 1.6;
+    }
+
+    .affiliation {
+      margin: 15px 0 22px;
+      color: var(--muted);
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px 26px;
+    }
+
+    nav a {
+      text-decoration: none;
+    }
+
+    nav a[aria-current="page"] {
+      color: var(--accent);
+    }
+
+    main {
+      padding-top: 64px;
+    }
+
+    .section-label {
+      margin: 0 0 25px;
+      color: var(--muted);
+      font-weight: normal;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+    }
+
+    .publication-heading {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 20px;
+      border-bottom: 1px solid var(--line);
+      margin-bottom: 32px;
+    }
+
+    .publication-heading a {
+      white-space: nowrap;
+    }
+
+    .year-group {
+      display: grid;
+      grid-template-columns: 65px minmax(0, 1fr);
+      gap: 22px;
+      margin-bottom: 34px;
+    }
+
+    .year {
+      margin: 4px 0 0;
+      color: var(--muted);
+      font-weight: normal;
+    }
+
+    .papers {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .paper {
+      margin-bottom: 29px;
+    }
+
+    .paper h4 {
+      margin: 0 0 5px;
+      font-size: 18px;
+      font-weight: normal;
+      line-height: 1.4;
+    }
+
+    .paper h4 a {
+      text-decoration: none;
+    }
+
+    .paper h4 a:hover {
+      text-decoration: underline;
+    }
+
+    .authors,
+    .venue {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    .venue {
+      font-style: italic;
+    }
+
+
+    .venue.preprint {
+    font-style: normal;
+    }
+
+    footer {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 60px;
+      padding: 24px 0 40px;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+    }
+
+    @media (max-width: 560px) {
+      .page {
+        width: calc(100% - 36px);
+      }
+
+      header {
+        padding-top: 38px;
+      }
+
+      main {
+        padding-top: 44px;
+      }
+
+      .year-group {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      .publication-heading {
+        flex-wrap: wrap;
+        gap: 0;
+        padding-bottom: 18px;
+      }
+
+      .publication-heading .section-label {
+        margin-bottom: 10px;
+      }
+    }
+
+    header,
+    .publication-heading,
+    footer {
+    border: none;
+    }
+
+    .venue .arxiv-link {
+    display: inline-block;
+    margin-left: 16px;
+    font-style: normal;
+    text-decoration: none;
+    }
+
+    .venue .arxiv-link:hover {
+    color: var(--accent);
+    text-decoration: underline;
+    }
+
+    .theme-note {
+    margin: 0 0 0;
+    color:  #000;
+    font-size: 15px;
+    font-style: normal;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+    <header>
+      <h1>
+        <a href="index2.html">Sayak Bhattacharjee</a>
+      </h1>
+    </header>
+
+    <main>
+      <section aria-labelledby="publications-heading">
+        
+
+        <!-- To add a paper, copy an <li class="paper"> block
+             into the appropriate year and edit its contents. -->
+
+        <div class="year-group">
+          <h3 class="year">2026</h3>
+          <ul class="papers">
+            <li class="paper">
+              <h4>
+                <a href="https://arxiv.org/abs/2608.12485">
+                  Dual Gauge Theory for Two Dimensional Superfluid Turbulence
+                </a>
+              </h4>
+              <p class="authors">T. Helbig, S. Bhattacharjee, S. Raghu</p>
+              <p class="venue preprint">arXiv:2608.12485</p>
+            </li>
+
+            <li class="paper">
+              <h4>
+                <a href="https://arxiv.org/abs/2607.19466">
+                  Anyon Crystals and Hall Crystals in a Periodic Potential
+                </a>
+              </h4>
+              <p class="authors">S. Bhattacharjee, J. May-Mann, S. Raghu</p>
+              <p class="venue preprint">arXiv:2607.19466</p>
+            </li>
+
+
+
+            <li class="paper">
+              <h4>
+                <a href="https://arxiv.org/abs/2605.26207">
+                  Conserving Relaxation-Time Approximation for Electron-Electron Collisions
+                </a>
+              </h4>
+              <p class="authors">S. Bhattacharjee, T. Kiliptari, D. L. Maslov</p>
+              <p class="venue preprint">arXiv:2605.26207</p>
+            </li>
+
+            <li class="paper">
+              <h4>
+                <a href="https://arxiv.org/abs/2604.08654">
+                  Mesoscopic Transport in a Chern Mosaic
+                </a>
+              </h4>
+              <p class="authors">
+                S. Bhattacharjee, J. May-Mann, Y. H. Kwan, T. Devakul, A. Sharpe
+              </p>
+              <p class="venue preprint">arXiv:2604.08654</p>
+            </li>
+
+            <li class="paper">
+              <h4>
+                <a href="https://arxiv.org/abs/2603.14680">
+                  Composite Boson Theory of Hall Crystals and Their Transitions to Wigner Crystals
+                </a>
+              </h4>
+              <p class="authors">J. May-Mann, S. Bhattacharjee, S. Raghu</p>
+              <p class="venue preprint">arXiv:2603.14680</p>
+            </li>
+
+            <li class="paper">
+            <h4>
+                <a href="https://royalsocietypublishing.org/rsta/article/384/2325/20250018/482667/Quantum-turbulence-in-the-many-body-regimeQuantum">
+                Quantum Turbulence in the Many-Body Regime
+                </a>
+            </h4>
+            <p class="authors">
+                S. Bhattacharjee, M. K. Verma, A. V. Balatsky, S. Raghu
+            </p>
+            <p class="venue">
+                Philosophical Transactions of the Royal Society A 384 (2325): 20250018
+
+                <a class="arxiv-link" href="https://arxiv.org/abs/2606.23822">[arxiv]</a>
+                <span style="margin-left: 16px; font-weight: bold; font-style: normal; color: black;">
+                Theme issue ‘Frontiers of turbulence and statistical physics’
+                </span></p>
+            </p>
+            </li>
+
+            <li class="paper">
+            <h4>
+                <a href="https://doi.org/10.1103/lzbb-qx91">
+                Tunable Anyonic Permeability Across ℤ<sub>2</sub> Spin Liquid Junctions
+                </a>
+            </h4>
+            <p class="authors">S. Bhattacharjee*, S. Sur*, A. Agarwala</p>
+            <p class="venue">
+                Physical Review B 113, 205103
+                <a class="arxiv-link" href="https://arxiv.org/abs/2506.17394">[arxiv]</a> 
+                <span style="margin-left: 16px; font-style: italic; color: var(--muted);">
+                *equal contribution
+                </span>
+            </p>
+            </li>
+
+            <li class="paper">
+            <h4>
+                <a href="https://doi.org/10.1103/njzm-t262">
+                Absorbing State Transitions with Long-Range Annihilation
+                </a>
+            </h4>
+            <p class="authors">
+                N. O’Dea, S. Bhattacharjee, S. Gopalakrishnan, V. Khemani
+            </p>
+            <p class="venue">
+                Physical Review E 114, L012101
+                <a class="arxiv-link" href="https://arxiv.org/abs/2409.03280">[arxiv]</a>
+                <span style="margin-left: 16px; font-weight: bold; font-style: normal; color: black;">
+                Letter
+                </span>
+            </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="year-group">
+          <h3 class="year">2025</h3>
+          <ul class="papers">
+           <li class="paper">
+            <h4>
+                <a href="https://doi.org/10.1103/PhysRevResearch.7.L022058">
+                Density-and-Phase Domain Walls in a Condensate with Dynamical Gauge Potential
+                </a>
+            </h4>
+            <p class="authors">S. Bhattacharjee, R. Moessner, S. Dutta</p>
+            <p class="venue">
+                Physical Review Research 7, L022058
+                <a class="arxiv-link" href="https://arxiv.org/abs/2212.14195">[arxiv]</a>
+                <span style="margin-left: 16px; font-weight: bold; font-style: normal; color: black;">
+                Letter
+                </span>
+            </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="year-group">
+          <h3 class="year">2023</h3>
+          <ul class="papers">
+            <li class="paper">
+            <h4>
+                <a href="https://doi.org/10.1103/PhysRevE.108.044148">
+                Green’s Functions for Random Resistor Networks
+                </a>
+            </h4>
+            <p class="authors">S. Bhattacharjee, K. Ramola</p>
+            <p class="venue">
+                Physical Review E 108, 044148
+                <a class="arxiv-link" href="https://arxiv.org/abs/2210.15562">[arxiv]</a>
+            </p>
+            </li>
+
+            <li class="paper">
+            <h4>
+                <a href="https://doi.org/10.1103/PhysRevE.107.064405">
+                Periodic Orbits in Deterministic Discrete-Time Evolutionary Game Dynamics:
+                An Information-Theoretic Perspective
+                </a>
+            </h4>
+            <p class="authors">
+                S. Bhattacharjee, V. K. Dubey, A. Mukhopadhyay, S. Chakraborty
+            </p>
+            <p class="venue">
+                Physical Review E 107, 064405
+                <a class="arxiv-link" href="https://arxiv.org/abs/2210.00520">[arxiv]</a>
+            </p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="year-group">
+          <h3 class="year">2022</h3>
+          <ul class="papers">
+            <li class="paper">
+              <h4>
+                <a href="https://arxiv.org/abs/2212.04434">
+                  Rational Distance Sets on a Parabola using Pythagorean Triplets
+                </a>
+              </h4>
+              <p class="authors">S. Bhattacharjee, D. Jain</p>
+                <p class="venue preprint">arXiv:2212.04434</p>            
+            </li>
+
+            <li class="paper">
+              <h4>
+                <a href="https://doi.org/10.1007/s41614-022-00078-0">
+                  Physics of Plasmas Confined by a Dipole Magnet:
+                  Insights from Compact Experiments Driven at Steady State
+                </a>
+              </h4>
+              <p class="authors">
+                S. Bhattacharjee, A. R. Baitha, A. Nanda, S. Hunjan, S. Bhattacharjee
+              </p>
+              <p class="venue">Reviews of Modern Plasma Physics 6, 16. 
+                <span style="margin-left: 16px; font-weight: bold; font-style: normal; color: black;">
+                Special Topics article
+                </span></p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="year-group">
+          <h3 class="year">2021</h3>
+          <ul class="papers">
+            <li class="paper">
+              <h4>
+                <a href="https://doi.org/10.1088/1402-4896/abdb58">
+                  Characterizing Spatially Varying Optical Emissions in a Steady-State
+                  Dipole Plasma: Inversion Based Experiments and Modeling
+                </a>
+              </h4>
+              <p class="authors">
+                S. Bhattacharjee, A. R. Baitha, J. V. Mathew, S. Bhattacharjee
+              </p>
+              <p class="venue">Physica Scripta 96, 035605</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="year-group">
+          <h3 class="year">2020</h3>
+          <ul class="papers">
+            <li class="paper">
+              <h4>
+                <a href="https://doi.org/10.1088/1361-6404/ab4d64">
+                  Transform as a Vector? Tying Functional Parity with Rotation Angle of Coordinate Axes
+                </a>
+              </h4>
+              <p class="authors">S. Bhattacharjee</p>
+              <p class="venue">European Journal of Physics 41, 015802</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+    </main>
+
+
+  </div>
+</body>
+</html>
